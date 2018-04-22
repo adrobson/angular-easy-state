@@ -1,0 +1,15 @@
+<h2>Data Entry</h2>
+
+<label>Select a country: </label>
+
+<select (change)="onChange()" [(ngModel)]="AppState.SelectedCountryId">
+
+    <option *ngFor="let country of AppState.CountryList" value={{country.id}}>
+
+        {{country.name}}
+
+    </option>
+
+ </select>
+
+ <input type="button" (click)="getData()" value="Get Data">﻿
